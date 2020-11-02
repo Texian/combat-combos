@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuDrop from './scripts/menuDrop';
 import logo from './logo.svg';
 import './App.css';
 
@@ -49,11 +50,18 @@ function App() {
         </div>
         <div class="combos">
           <header>COMBO</header>
-          <div className="combo-list"></div>
+          <div className="combo-list">
+            <label htmlFor="comboName">Combo Name</label>
+            <input type="text" name="comboName" id="comboName"/>
+            <button>Upload</button> {/* Upload a JSON or CSV to use the built-in roller */}
+            <button>Download</button> {/* Save as JSON or CSV to upload at a later date */}
+          </div>
         </div>
-        <div class="list">
-          <header>MOVE LIST</header>
-          <div className="combo-list"></div>
+        <div class="charms">
+          <header>CHARM LIST</header>
+          <label htmlFor="charmList">Charms</label>
+            <MenuDrop />
+          <div className="charm-list"></div>
         </div>
         <div class="results">
           <header>RESULTS</header>
