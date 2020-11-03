@@ -59,12 +59,42 @@ function App() {
         </div>
         <div class="charms">
           <header>CHARM LIST</header>
-          <label htmlFor="charmList">Charms</label>
-            <MenuDrop />
-          <div className="charm-list"></div>
+          <label htmlFor="charmList">Abilities</label>
+          <div className="ability-list"><MenuDrop /></div>
+          <div className="charm-list">
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Essence Cost</th>
+                <th>Dice Pool</th>
+              </tr>
+              <tr>
+                <th>Punch</th>
+                <th>2</th>
+                <th>4</th>
+              </tr>
+            </table>
+          </div>
         </div>
         <div class="results">
           <header>RESULTS</header>
+          <div id="results">
+            <div className="final-tally">
+              <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Total Essence Cost</th>
+                  <th>Total Additional Cost</th>
+                  <th>Total Dice Pool</th>
+                </tr>
+              </table>
+            </div>
+            <button>Roll?</button>
+            <div className="roll-results">
+              <div>Results:</div>
+              <div>Successes:</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
